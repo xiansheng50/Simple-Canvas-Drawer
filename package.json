@@ -1,6 +1,6 @@
 {
   "name": "simple-canvas-drawer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -8,13 +8,17 @@
     "build": "tsc"
   },
   "types": "dist/index.d.ts",
-  "author": "zhenyi",
+  "author": "xiansheng",
   "license": "ISC",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.30.0",
     "@typescript-eslint/parser": "^4.30.0",
     "eslint": "^7.32.0",
     "typescript": "^4.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiansheng50/Simple-Canvas-Drawer"
   },
   "dependencies": {}
 }

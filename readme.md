@@ -10,12 +10,12 @@
 ```javascript
 import CanvasDrawer from 'simple-canvas-drawer';
 
-const drawer = new CanvasDrawer({ width: 375, height: 650 });
+const drawer = new CanvasDrawer({ width: 400, height: 650 });
 drawer
   .draw([
     {
       type: 'block',
-      width: 375,
+      width: 400,
       height: 650,
       top: 0,
       left: 0,
@@ -24,7 +24,7 @@ drawer
     {
       type: 'img',
       width: 375,
-      src: 'https://cdn-test.daddylab.com/Upload/bms/20210917/075820/hbx8sj9f0tzj6hg3.jpg',
+      src: 'https://i.postimg.cc/yWsBgkkg/Comfy-UI-temp-mlyka-00004.png',
       bottom: 0,
       left: 0,
     },
@@ -33,6 +33,7 @@ drawer
       text: 'Simple Canvas-Drawer is a simple canvas library for drawing posters',
       top: 20,
       left: 30,
+      maxWidth: 360,
     },
   ])
   .then(() => {
