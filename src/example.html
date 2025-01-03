@@ -1,0 +1,83 @@
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=375,user-scalable=no" />
+    <title>老爸实验室</title>
+  </head>
+
+  <body>
+    <canvas id="app" width="400" height="600"></canvas>
+    <img id="img" style="margin: 20px" />
+    <!-- built files will be auto injected -->
+
+    <script src="../dist/index.js"></script>
+    <script>
+      const drawer = new CanvasDrawer({
+        canvas: document.querySelector('#app'),
+        width: 400,
+        height: 600,
+      });
+      drawer
+        .draw([
+          {
+            type: 'img',
+            src: 'https://cdn-test.daddylab.com/Upload/bms/20210917/075820/hbx8sj9f0tzj6hg3.jpg',
+            top: 20,
+            left: 30,
+            bottom: 200,
+            right: 30,
+            height: 200,
+            // width: 300,
+            borderRadius: 100,
+          },
+          {
+            type: 'block',
+            width: 200,
+            height: 100,
+            //   backgroundColor: '#0000ff',
+            gradientBackground: {
+              direction: 'vertical',
+              colors: ['#000', 'transparent'],
+            },
+            border: '10 #f00',
+            top: 0,
+            left: 0,
+            right: 50,
+            bottom: 60,
+          },
+          {
+            type: 'block',
+            width: 200,
+            height: 100,
+            //   backgroundColor: '#00ff00',
+            gradientBackground: {
+              direction: 'vertical',
+              colors: ['#00f', '#f00'],
+            },
+            border: '5 #0ff dash',
+            borderRadius: 30,
+            top: 0,
+            left: 0,
+          },
+          {
+            type: 'text',
+            text: '我是一个粉刷匠，nn，粉刷本领强，nn，我要把那新房子，nn，刷得很漂亮',
+            top: 0,
+            left: 55,
+            right: 12,
+            bottom: 300,
+            // font: 'italic bold 12px arial,sans-serif',
+            // fontWeight: 'bold',
+            fontSize: 12,
+            lineHeight: 25,
+            maxWidth: 100,
+            color: 'red',
+          },
+        ])
+        .then(() => {
+          document.querySelector('#img').src = drawer.dataURL;
+        });
+    </script>
+  </body>
+</html>
